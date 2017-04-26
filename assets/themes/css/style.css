@@ -100,18 +100,22 @@
 .video-embed {
   margin-bottom: 15px;
 }
-
-.profile-content {
-  padding-left:0;
-  min-height:145px;
-}
-
 .profile-border {
   border:1px solid white;
 }
 
+@media (min-width: 992px) {
+  .profile-discord-id {
+    text-align: right;
+  }
+  .profile-content {
+    padding-left:0;
+    min-height:145px;
+  }
+
+}
+
 .profile-discord-id {
-  text-align: right;
   color: #868686;
 }
 .profile-discord-id img {
