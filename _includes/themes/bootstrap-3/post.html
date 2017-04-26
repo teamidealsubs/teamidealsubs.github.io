@@ -10,7 +10,16 @@
     <div class="content">
       {{ content }}
 	  {% if page.openload-id %}
-	    <iframe src="https://openload.co/embed/{{ page.openload-id }}/" scrolling="no" frameborder="0" width="850" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="embed-responsive embed-responsive-16by9 video-embed">
+              <!-- <iframe src="https://openload.co/embed/{{ page.openload-id }}/"
+                      scrolling="no" frameborder="0" width="850" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe> -->
+              <iframe class="embed-responsive-item" src="https://openload.co/embed/{{ page.openload-id }}/"
+                      scrolling="no" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+            </div>
+          </div>
+        </div>
 	  {% endif %}
     </div>
 

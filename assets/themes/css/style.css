@@ -85,3 +85,15 @@ h1, h2, h3, h4 {
   vertical-align: text-bottom !important;
   height: 20px !important;
 }
+
+.page-header {
+  margin-top: 0;
+}
+
+.sidebar {
+  margin-top: 20px;
+}
+
+.video-embed {
+  margin-bottom: 15px;
+}
