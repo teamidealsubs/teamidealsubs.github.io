@@ -92,6 +92,9 @@
 
 .sidebar {
   margin-top: 20px;
+  border-right: #1c1e22 1px solid;
+  padding-right: 10px;
+  text-align: justify;
 }
 
 .video-embed {
