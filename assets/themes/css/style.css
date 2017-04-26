@@ -109,3 +109,12 @@
 .profile-border {
   border:1px solid white;
 }
+
+.profile-discord-id {
+  text-align: right;
+  color: #868686;
+}
+.profile-discord-id img {
+  width: 21px;
+  height: 21px;
+}
