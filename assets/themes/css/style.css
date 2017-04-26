@@ -101,3 +101,7 @@
 .profile-content {
   padding-left:0;
 }
+
+.profile-border {
+  border:1px solid white;
+}
