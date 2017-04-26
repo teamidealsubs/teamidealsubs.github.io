@@ -29,8 +29,8 @@
       {% include JB/tags_list %}
     </ul>
   {% endunless %}  
-  
-    <hr>
+
+    <!-- <hr>
     <ul class="pagination">
     {% if page.previous %}
       <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
@@ -43,8 +43,9 @@
     {% else %}
       <li class="next disabled"><a>Next &rarr;</a>
     {% endif %}
-    </ul>
+    </ul> -->
     <hr>
+    {% include JB/sharing %}
     {% include JB/comments %}
   </div>
 </div>

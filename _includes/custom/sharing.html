@@ -1,0 +1,33 @@
+<div class="sharing-button">
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-text="{{ page.title }}{% if page.episode %}: E{{ page.episode }}{% endif %}"
+       data-url="{{ site.production_url }}{{ page.url }}"
+       data-hashtags="{% if page.category %}{{ page.category }},{% endif %}TeamIdealSubs" data-show-count="false">Tweet</a>
+</div>
+<div class="sharing-button">
+    <div class="fb-share-button"
+         data-href="{{ site.production_url }}{{ page.url }}"
+         data-layout="button" data-size="small"
+         data-mobile-iframe="true">
+        <a class="fb-xfbml-parse-ignore" target="_blank"
+           href="https://www.facebook.com/sharer/sharer.php?u={{ site.production_url|url_encode }}{{ page.url|url_encode }}&amp;src=sdkpreparse">Share</a>
+    </div>
+</div>
+<div class="sharing-button">
+    <script type="text/javascript">
+        reddit_url='{{ site.production_url }}{{ page.url }}';
+        reddit_newwindow='1'
+    </script>
+    <script type="text/javascript" src="//www.redditstatic.com/button/button1.js"></script>
+</div>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=1037029566315000";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
