@@ -1,0 +1,143 @@
+/* Custom container */
+
+/* Replaced with normal container and standard footer */
+/*.container-narrow {
+  margin: 0 auto;
+  max-width: 700px; }
+
+.container-narrow > hr {
+  margin: 30px 0; }
+*/
+
+/* Replaced with standard BS3 Navbar */
+/*.navbar .nav {
+  float: right; }*/
+
+/* Jekyll Bootstrap Colors */
+/* h1, h2, h3, h4 {
+  color: #f22430;
+} */
+#footer {
+  background-color: #444a50;
+}
+
+
+
+/* posts index */
+.post > h3.title {
+  position: relative;
+  padding-top: 10px; }
+
+.post > h3.title span.date {
+  position: absolute;
+  right: 0;
+  font-size: 0.9em; }
+
+.post > .more {
+  margin: 10px 0;
+  text-align: left; }
+
+/* post-full*/
+.post-full .date {
+  margin-bottom: 20px;
+  font-weight: bold; }
+
+/* tag_box */
+.tag_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; }
+
+.tag_box li {
+  line-height: 28px; }
+
+.tag_box li i {
+  opacity: 0.9; }
+
+.tag_box.inline li {
+  float: left; }
+
+.tag_box a {
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  color: #555;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px dashed #cccccc; }
+
+.tag_box a span {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.tag_box a:hover {
+  background-color: #e5e5e5; }
+
+.tag_box a.active {
+  background: #57A957;
+  border: 1px solid #4c964d;
+  color: #FFF; }
+
+.sharing-button {
+  display: inline;
+}
+.sharing-button iframe, .sharing-button .fb-share-button {
+  vertical-align: text-bottom !important;
+  height: 20px !important;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.sidebar {
+  margin-top: 20px;
+  border-right: #1c1e22 1px solid;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+.video-embed {
+  margin-bottom: 15px;
+}
+.profile-border {
+  border:1px solid white;
+}
+
+@media (min-width: 992px) {
+  .profile-discord-id {
+    text-align: right;
+  }
+  .profile-content {
+    padding-left:0;
+    min-height:145px;
+  }
+
+}
+
+.profile-discord-id {
+  color: #868686;
+}
+.profile-discord-id img {
+  width: 21px;
+  height: 21px;
+}
+
+.sidebar-button {
+  border-radius: 3px;
+  background-color:#1c1e22;
+  border:1px solid #0c0d0e;
+  text-align: center;
+  padding:10px;
+  margin-top:20px;
+  margin-bottom:20px;
+  width:100%;
+}
+
+.download-button {
+  margin-bottom: 10px;
+}
+
+.credits {
+  margin-bottom: 10px;
+}
