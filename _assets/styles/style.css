@@ -142,6 +142,10 @@
   margin-bottom: 10px;
 }
 
+.footer-style {
+  text-align:center;
+  font-size:10px;
+}
 .views-panel {
   padding: 5px;
   text-align: center;
