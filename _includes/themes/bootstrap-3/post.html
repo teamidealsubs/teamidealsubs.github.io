@@ -21,6 +21,15 @@
           </div>
         </div>
 	  {% endif %}
+      {% if page.credits %}
+        <div class="credits">
+          {% for credit_hash in page.credits %}
+            {% for credit in credit_hash %}
+              <span class="label label-primary">{{ credit[0] }}</span> {% for person in credit[1] %}{{ person }}{% if forloop.last != true %}, {% endif %}{% endfor %}<br>
+            {% endfor %}
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
 
   {% unless page.categories == empty %}
