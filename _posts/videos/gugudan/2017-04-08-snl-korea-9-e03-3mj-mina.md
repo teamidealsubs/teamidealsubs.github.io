@@ -7,5 +7,12 @@ tags: [SNL Korea 9, Gugudan, Mina]
 episode: 03
 permalink: /gugudan/snl-korea/E03/3mj/mina
 openload-id: 5YpVO5rH3BU
+credits:
+  - Translations: [Calynxx]
+  - Timers: [pyofriend]
+  - Typesetter: [pyofriend]
+  - Editors: [pyofriend]
+  - Video by: [pyofriend]
+  - Encoded by: [pyofriend]
 ---
 {% include JB/setup %}
