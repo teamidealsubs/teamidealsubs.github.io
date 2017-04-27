@@ -170,7 +170,13 @@ gulp.task('default', ['build']);
 gulp.task('serve', ['build:local'], function() {
 
     browserSync.init({
-        server: paths.siteDir,
+        port: 3000,
+        server: {
+            baseDir: paths.siteDir,
+            serveStaticOptions: {
+                extensions: ['html']
+            }
+        },
         ghostMode: false, // Toggle to mirror clicks, reloads etc. (performance)
         logFileChanges: true,
         logLevel: 'debug',
