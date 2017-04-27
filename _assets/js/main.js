@@ -19,7 +19,7 @@ $('.openload-download-button').on('click', function () {
                             if (dataDownload['status'] == 200) {
                                 window.location = dataDownload['result']['url'], '_blank';
 
-                                modal.find('.openload-download-button-complete').prop('onclick',null).off('click');
+                                modal.find('.openload-download-button-complete').prop('onclick', null).off('click');
                                 modal.find('#openloadDownloadModal-captcha-content').val('')
                                 $('#openloadDownloadModal').modal('hide')
                             }
@@ -38,25 +38,27 @@ $('.openload-download-button').on('click', function () {
     });
     // @TODO: error handling
 })
-$('.openload-download-button').on('click', function () {
-    var $btn = $(this).button('loading')
 
+$('.views-panel').each(function() {
+    var $viewPanel = $(this)
     $.ajax({
         type: 'GET',
-        url: 'https://api.openload.co/1/file/dlticket?file=' + $btn.data('openload-id'),
+        url: 'https://teamidealsubs-165916.appspot.com/query?id=ahZlfnRlYW1pZGVhbHN1YnMtMTY1OTE2chULEghBcGlRdWVyeRiAgICAgICACgw',
         dataType: 'json',
-        success: function (data) {
-            if (data['status'] == 200) {
-                var modal = $('#openloadDownloadModal').modal('show')
-                modal.find('.openload-download-modal-captcha').attr('src', data['result']['captcha_url'])
+        success: function (dataAllViews) {
+            var dataFound = false
+            dataAllViews["rows"].forEach(function (pageViews) {
+                if (pageViews[0] == $viewPanel.data("page-path")) {
+                    $viewPanel.html("Views: <b>" + pageViews[1] + "</b>")
+                    dataFound = true
+                }
+            });
+            if (dataFound == false) {
+                $viewPanel.text("No views yet")
             }
         },
-        complete: function () {
-            $btn.button('reset')
+        error: function() {
+            $viewPanel.text("Error")
         }
-    });
-    // @TODO: error handling
-})
-$('#openload-download-button-complete').on('click', function() {
-
+    })
 })

@@ -20,16 +20,25 @@
             </div>
           </div>
         </div>
+	  {% endif %}
       <div class="row">
-        <div class="col-sm-12">
-          <button class="btn btn-primary download-button openload-download-button"
+        <div class="col-sm-12 col-md-2">
+          {% if page.openload-id %}
+          <button class="btn btn-primary download-button openload-download-button btn-lg btn-block"
                   data-openload-id="{{ page.openload-id }}"
                   data-loading-text="Loading..."
                   autocomplete="off"
                   type="button">Download</button>
+          {% endif %}
+        </div>
+        <div class="col-sm-12 col-md-2 col-md-offset-8">
+          <div class="panel panel-default">
+            <div class="panel-body views-panel" data-page-path="{{ page.url}}">
+              Loading...
+            </div>
+          </div>
         </div>
       </div>
-	  {% endif %}
       {% if page.credits %}
         <div class="credits">
           {% for credit_hash in page.credits %}
