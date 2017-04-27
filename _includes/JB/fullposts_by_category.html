@@ -1,0 +1,12 @@
+  {% for post in posts_collate  %}
+    {% if post.category == category %}
+        <div id="{{ post.id }}-ref">
+            <a href="#{{ post.id }}-ref">
+                <h3>{{ post.title }} {% if post.tagline %}<small>{{post.tagline}}</small>{% endif %} {%if post.author %}<small>by {{ post.author }}</small>{% endif %} <small>on {{ post.date | date_to_long_string }}</small></h3>
+            </a>
+            <div class="content">
+                {{ post.content }}
+            </div>
+        </div>
+    {% endif %}
+  {% endfor %}

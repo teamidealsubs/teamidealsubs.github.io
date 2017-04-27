@@ -1,5 +1,5 @@
 {% include JB/is_production %}
-{% if site.JB.sharing.provider and page.JB.sharing != false %}
+{% if site.JB.sharing.provider and page.JB.sharing != false and page.category != "news" %}
 
 {% case site.JB.sharing.provider %}
 {% when "custom" %}
