@@ -141,3 +141,8 @@
 .credits {
   margin-bottom: 10px;
 }
+
+.views-panel {
+  padding: 5px;
+  text-align: center;
+}
