@@ -17,7 +17,7 @@ $('.openload-download-button').on('click', function () {
                         dataType: 'json',
                         success: function (dataDownload) {
                             if (dataDownload['status'] == 200) {
-                                window.location = dataDownload['result']['url'], '_blank';
+                                window.location.href = dataDownload['result']['url'];
 
                                 modal.find('.openload-download-button-complete').prop('onclick', null).off('click');
                                 modal.find('#openloadDownloadModal-captcha-content').val('')
@@ -30,7 +30,12 @@ $('.openload-download-button').on('click', function () {
                         }
                     });
                 });
+            } else {
+                window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
             }
+        },
+        error: function() {
+            window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
         },
         complete: function () {
             $btn.button('reset')
