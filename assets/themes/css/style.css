@@ -134,6 +134,10 @@
   width:100%;
 }
 
+.download-button {
+  margin-bottom: 10px;
+}
+
 .credits {
   margin-bottom: 10px;
 }
