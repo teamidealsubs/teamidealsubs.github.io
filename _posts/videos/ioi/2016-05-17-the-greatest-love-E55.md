@@ -14,6 +14,6 @@ credits:
   - Editors: [Yubseyo, OH_mes]
   - Video by: [PalLikey]
   - Encoded by: [Yubseyo]
-  related-tags: [The Greatest Love]
+related-tags: [The Greatest Love]
 ---
 {% include JB/setup %}

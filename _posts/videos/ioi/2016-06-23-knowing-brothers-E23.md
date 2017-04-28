@@ -14,6 +14,6 @@ credits:
   - Editors: [Yubseyo]
   - Video by: [Yubseyo]
   - Encoded by: [Yubseyo]
-  related-tags: [Knowing Brothers]
+related-tags: [Knowing Brothers]
 ---
 {% include JB/setup %}

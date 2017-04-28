@@ -14,6 +14,6 @@ credits:
   - Editors: [Yubseyo]
   - Video by: [Yubseyo]
   - Encoded by: [Yubseyo]
-  related-tags: [Weekly Idol]
+related-tags: [Weekly Idol]
 ---
 {% include JB/setup %}
