@@ -14,8 +14,8 @@ header: Posts By Tag
 
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-  <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list.html %}
-  </ul>
+  <div class="row">
+    {% assign pages_list = tag[1] %}
+    {% include JB/pages_list_video.html %}
+  </div>
 {% endfor %}
