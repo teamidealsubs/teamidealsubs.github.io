@@ -140,15 +140,9 @@
   height: 21px;
 }
 
-.sidebar-button {
-  border-radius: 3px;
-  background-color:#1c1e22;
-  border:1px solid #0c0d0e;
+.sidebar-contact {
   text-align: center;
-  padding:10px;
-  margin-top:20px;
-  margin-bottom:20px;
-  width:100%;
+  color: #ffffff;
 }
 
 .download-button {
