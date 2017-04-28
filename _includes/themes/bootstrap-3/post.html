@@ -41,6 +41,9 @@
         </div>
         {% endif %}
       </div>
+      {% if page.description %}
+      <p>{{ page.description }}</p>
+      {% endif %}
       {% if page.credits %}
         <div class="credits">
           {% for credit_hash in page.credits %}

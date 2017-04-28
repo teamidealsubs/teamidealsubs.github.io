@@ -176,3 +176,18 @@
   right: 20px;
   display:none;
 }
+
+.navbar-brand {
+  position: relative;
+  width: 200px;
+}
+.navbar-brand img {
+  position: absolute;
+  bottom: 8px;
+  height: 35px;
+}
+.navbar-brand span {
+  height: 50px;
+  left: 55px;
+  position: absolute;
+}
