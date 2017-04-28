@@ -75,7 +75,7 @@ $(document).ready(function(){
 
                     dataAllViews["rows"].forEach(function (pageViews) {
                         if (pageViews[0] == $viewPanel.data("page-path")) {
-                            $viewPanel.html($viewPanel.data("views-prefix") + "<b>" + pageViews[1] + "</b>")
+                            $viewPanel.html($viewPanel.data("views-prefix") + "<b>" + numeral(pageViews[1]).format('0,0') + "</b>")
                             dataFound = true
                         }
                     });
