@@ -171,6 +171,10 @@ gulp.task('serve', ['build:local'], function() {
 
     browserSync.init({
         port: 3000,
+        ui: {
+            port: 3001
+        },
+        online: true,
         server: {
             baseDir: paths.siteDir,
             serveStaticOptions: {

@@ -23,7 +23,7 @@ Usage:
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
         {% if category[0] != "news" %}
-            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
+            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path | replace:'.html','' }}#{{ category | url_encode }}-ref">
                 {{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
             </a></li>
     	{% endif %}
@@ -31,7 +31,7 @@ Usage:
   {% else %}
     {% for category in categories_list %}
         {% if category[0] != "news" %}
-            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
+            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path | replace:'.html','' }}#{{ category[0] | url_encode }}-ref">
                 {{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
             </a></li>
     	{% endif %}
