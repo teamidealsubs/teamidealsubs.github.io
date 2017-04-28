@@ -3,7 +3,7 @@ layout: post
 title: "Weekly Idol"
 description: ""
 category: IOI
-tags: [IOI]
+tags: [IOI, Weekly Idol]
 episode: 01
 permalink: /ioi/weeklyidol/E01
 openload-id: ZB7AsyzTMuQ

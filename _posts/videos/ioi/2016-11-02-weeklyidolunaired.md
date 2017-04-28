@@ -3,7 +3,7 @@ layout: post
 title: "Weekly Idol Unaired"
 description: ""
 category: IOI
-tags: [IOI]
+tags: [IOI, Weekly Idol]
 episode: 01
 permalink: /ioi/weeklyidolunaired/E01
 openload-id: nlM0IQUpIZY
