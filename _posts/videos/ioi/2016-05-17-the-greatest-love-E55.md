@@ -5,7 +5,7 @@ description: ""
 category: IOI
 tags: [The Greatest Love, IOI]
 episode: 55
-permalink: /ioi/greatestlove/E55
+permalink: /ioi/the-greatest-love-E55
 openload-id: 6-iH8fIB6AM
 credits:
   - Translations: [Yubseyo, OH_mes]
@@ -14,5 +14,6 @@ credits:
   - Editors: [Yubseyo, OH_mes]
   - Video by: [PalLikey]
   - Encoded by: [Yubseyo]
+  related-tags: [The Greatest Love]
 ---
 {% include JB/setup %}

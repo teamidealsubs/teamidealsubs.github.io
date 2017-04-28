@@ -5,7 +5,7 @@ description: ""
 category: IOI
 tags: [Sugar Man, IOI]
 episode: 28
-permalink: /ioi/sugarman/E28
+permalink: /ioi/two-yoo-project-sugar-man-E28
 openload-id: J7OCcfiEHxo
 credits:
   - Translations: [Yubseyo]

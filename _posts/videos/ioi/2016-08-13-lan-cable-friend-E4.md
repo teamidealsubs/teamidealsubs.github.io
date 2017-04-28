@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Lan Cable Friends - Episode 5"
+title: "Lan Cable Friends - Episode 4"
 description: ""
 category: IOI
 tags: [IOI, Lan Cable Friends]
-episode: 05
-permalink: /ioi/lcf/E05
-openload-id: k63epDBxsdI
+episode: 04
+permalink: /ioi/lan-cable-friend-E4
+openload-id: Vg0PD245oQM
 credits:
   - Translations: [Yubseyo]
   - Timers: [PalLikey, pyofriend, koji, Benzmixer, Yubseyo]
-  - Typesetter: [PalLikey]
+  - Typesetter: [PalLikey, Yubseyo]
   - Editors: [Yubseyo, PalLikey, Benzmixer]
   - Video by: [Sekl]
-  - Encoded by: [PalLikey]
+  - Encoded by: [Yubseyo]
 related-tags: [Lan Cable Friends]
 ---
 {% include JB/setup %}

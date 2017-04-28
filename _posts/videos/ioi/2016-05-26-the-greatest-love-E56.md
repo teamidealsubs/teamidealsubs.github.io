@@ -5,7 +5,7 @@ description: ""
 category: IOI
 tags: [The Greatest Love, IOI]
 episode: 56
-permalink: /ioi/greatestlove/E56
+permalink: /ioi/the-greatest-love-E56
 openload-id: brVfiY9HguM
 credits:
   - Translations: [Yubseyo, OH_mes]
@@ -14,5 +14,6 @@ credits:
   - Editors: [Yubseyo, eriye900, OH_mes]
   - Video by: [PalLikey]
   - Encoded by: [OH_mes]
+  related-tags: [The Greatest Love]
 ---
 {% include JB/setup %}

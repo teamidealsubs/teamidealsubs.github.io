@@ -5,7 +5,7 @@ description: ""
 category: IOI
 tags: [IOI, Lan Cable Friends]
 episode: 01
-permalink: /ioi/lcf/E01
+permalink: /ioi/lan-cable-friend-E1
 openload-id: T0C_JDrF4ZE
 credits:
   - Translations: [Yubseyo, OH_mes]

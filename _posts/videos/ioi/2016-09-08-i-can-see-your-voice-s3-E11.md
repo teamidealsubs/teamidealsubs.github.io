@@ -5,7 +5,7 @@ description: ""
 category: IOI
 tags: [ICSYV, IOI, Chungha]
 episode: 11
-permalink: /ioi/icsyv/E11
+permalink: /ioi/i-can-see-your-voice-s3-E11
 openload-id: s-5ciWVqrcQ
 credits:
   - Translations: [Yubseyo, eriye900]

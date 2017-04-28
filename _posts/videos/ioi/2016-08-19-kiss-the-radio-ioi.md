@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Knowing Brothers E23 - FB Livestream with IOI"
+title: "Super Junior's Kiss The Radio - IOI"
 description: ""
 category: IOI
-tags: [Knowing Brothers, IOI]
-episode: 23
-permalink: /ioi/knowingbrothers/E23-live
-openload-id: 0eORCM0UJWw
+tags: [Kiss The Radio, IOI]
+episode: 01
+permalink: /ioi/kiss-the-radio-ioi
+openload-id: T8N2fR3pHnc
 credits:
   - Translations: [Yubseyo]
-  - Timers: [Yubseyo]
+  - Timers: [Koji]
   - Typesetter: [Yubseyo]
   - Editors: [Yubseyo]
   - Video by: [Yubseyo]
