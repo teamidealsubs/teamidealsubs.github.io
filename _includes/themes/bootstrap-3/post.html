@@ -69,7 +69,21 @@
       {% assign tags_list = page.tags %}
       {% include JB/tags_list.html %}
     </ul>
-  {% endunless %}  
+  {% endunless %}
+
+    {% if page.related-tags %}
+      {% for related-tag in page.related-tags %}
+        {% for tag in site.tags %}
+          {% if tag[0] == related-tag %}
+            <h3 id="{{ tag[0] | url_encode }}-ref">All <b>{{ tag[0] }}</b> videos</h3>
+            <div class="row related-videos">
+              {% assign pages_list = tag[1] | sort: 'title' %}
+              {% include JB/pages_list_video.html %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
 
     <!-- <hr>
     <ul class="pagination">

@@ -27,7 +27,7 @@ Usage:
     {% if node.title != null %}
       {% if group == null or group == node.group %}
         <div class="col-xs-6 col-md-3">
-            <a href="{{ BASE_PATH }}{{node.url}}" class="thumbnail video-tile">
+            <a href="{{ BASE_PATH }}{{node.url}}" class="thumbnail video-tile{% if page.url == node.url %} active{% endif %}">
                 <img src="{{ site.JB.openload_thumbnail_path }}{{ node.openload-id }}">
                 <div class="caption">
                     <div>
