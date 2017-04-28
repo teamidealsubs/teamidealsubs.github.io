@@ -104,6 +104,7 @@
   border:1px solid white;
 }
 
+/* >= medium */
 @media (min-width: 992px) {
   .profile-discord-id {
     text-align: right;
@@ -112,7 +113,13 @@
     padding-left:0;
     min-height:145px;
   }
+  .video-tile {
+    min-height: 190px;
+  }
+}
 
+.video-tile p {
+  margin-bottom: 0;
 }
 
 .profile-discord-id {

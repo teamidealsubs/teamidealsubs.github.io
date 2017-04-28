@@ -26,17 +26,14 @@ Usage:
   {% for node in pages_list %}
     {% if node.title != null %}
       {% if group == null or group == node.group %}
-      	{% if page.url == node.url %}
-      	<li class="active">
-            {% if node.openload-id %}<img src="{{ site.JB.openload_thumbnaiL_path }}{{ node.openload-id }}" width="100">{% endif %}
-            <a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a>
-        </li>
-      	{% else %}
-      	<li>
-            {% if node.openload-id %}<img src="{{ site.JB.openload_thumbnaiL_path }}{{ node.openload-id }}" width="100">{% endif %}
-            <a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a>
-        </li>
-      	{% endif %}
+        <div class="col-xs-6 col-md-3">
+            <a href="{{ BASE_PATH }}{{node.url}}" class="thumbnail video-tile">
+                <img src="{{ site.JB.openload_thumbnaiL_path }}{{ node.openload-id }}">
+                <div class="caption">
+                    <p>{{node.title}}</p>
+                </div>
+            </a>
+        </div>
       {% endif %}
     {% endif %}
   {% endfor %}
