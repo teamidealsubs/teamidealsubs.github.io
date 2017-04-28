@@ -40,9 +40,14 @@
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-	
-	<!-- Generated: {{ site.time | date_to_rfc822 }} -->
 
+    {% seo %}
+    {% if page.openload-id %}
+    {% capture page_image %}{{ site.JB.openload_thumbnail_path }}{{ page.openload-id }}{% endcapture %}
+    <meta property="og:image" content="{{ page_image }}" />
+    {% endif %}
+
+    <!-- Generated: {{ site.time | date_to_rfc822 }} -->
   </head>
 
   <body>

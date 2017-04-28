@@ -11,11 +11,16 @@ defaults:
       path: ""
     values:
       episode: "none"
-      
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 title : Team Ideal Subs
+description : Watch subbed I.O.I videos for free.
+url : https://teamidealsubs.com
+logo : /assets/img/tis-logo-trans.png
+google_site_verification : yyy14OCyWRYyzDdtpb0BG5AwQG8Xx66B-2QMLw_CmqI
+lang : en_US
 #tagline: Site Tagline
 author :
   name : Team Ideal Subs
@@ -34,7 +39,7 @@ author :
 #
 production_url : https://teamidealsubs.com
 
-gems: ["jekyll-sitemap"]
+gems: ["jekyll-sitemap", "jekyll-seo-tag"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -84,7 +89,7 @@ JB :
   atom_path : /atom.xml
   rss_path : /rss.xml
 
-  openload_thumbnaiL_path: https://slmn.de/teamidealsubs/teamidealsubs-openload-thumbnail-proxy.php?file_id=
+  openload_thumbnail_path: https://slmn.de/teamidealsubs/teamidealsubs-openload-thumbnail-proxy.php?file_id=
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
