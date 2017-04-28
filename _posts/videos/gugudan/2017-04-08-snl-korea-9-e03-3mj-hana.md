@@ -14,5 +14,6 @@ credits:
   - Editors: [pyofriend]
   - Video by: [pyofriend]
   - Encoded by: [pyofriend]
+related-tags: [SNL Korea 9]
 ---
 {% include JB/setup %}
