@@ -191,3 +191,7 @@
   left: 55px;
   position: absolute;
 }
+
+.navbar-icon {
+  margin-right: 8px;
+}
