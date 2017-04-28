@@ -11,7 +11,7 @@ credits:
   - Translations: [kimkim, Calynxx]
   - Timers: [pyofriend]
   - Typesetter: [pyofriend]
-  - Editors: [pyofriend, pyofriend]
+  - Editors: [pyofriend]
   - Video by: [pyofriend]
   - Encoded by: [pyofriend]
 ---
