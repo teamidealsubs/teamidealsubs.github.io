@@ -30,7 +30,13 @@ Usage:
             <a href="{{ BASE_PATH }}{{node.url}}" class="thumbnail video-tile">
                 <img src="{{ site.JB.openload_thumbnail_path }}{{ node.openload-id }}">
                 <div class="caption">
-                    <p>{{node.title}}</p>
+                    <div>
+                        <p>{{node.title}}</p>
+                    </div>
+                    <div class="views-container views-video-tile" data-page-path="{{ node.url}}"
+                         data-views-prefix="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span> ">
+                        Loading...
+                    </div>
                 </div>
             </a>
         </div>

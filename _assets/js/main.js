@@ -44,30 +44,6 @@ $('.openload-download-button').on('click', function () {
     // @TODO: error handling
 })
 
-$('.views-panel').each(function() {
-    var $viewPanel = $(this)
-    $.ajax({
-        type: 'GET',
-        url: 'https://teamidealsubs-165916.appspot.com/query?id=ahZlfnRlYW1pZGVhbHN1YnMtMTY1OTE2chULEghBcGlRdWVyeRiAgICAgICACgw',
-        dataType: 'json',
-        success: function (dataAllViews) {
-            var dataFound = false
-            dataAllViews["rows"].forEach(function (pageViews) {
-                if (pageViews[0] == $viewPanel.data("page-path")) {
-                    $viewPanel.html("Views: <b>" + pageViews[1] + "</b>")
-                    dataFound = true
-                }
-            });
-            if (dataFound == false) {
-                $viewPanel.text("No views yet")
-            }
-        },
-        error: function() {
-            $viewPanel.text("Error")
-        }
-    })
-})
-
 $(document).ready(function(){
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
@@ -86,4 +62,33 @@ $(document).ready(function(){
     });
 
     $('#back-to-top').tooltip('show');
+
+    if ($.find('.views-container').length > 0) {
+        $.ajax({
+            type: 'GET',
+            url: 'https://teamidealsubs-165916.appspot.com/query?id=ahZlfnRlYW1pZGVhbHN1YnMtMTY1OTE2chULEghBcGlRdWVyeRiAgICAgICACgw',
+            dataType: 'json',
+            success: function (dataAllViews) {
+                $('.views-container').each(function() {
+                    var $viewPanel = $(this)
+                    var dataFound = false
+
+                    dataAllViews["rows"].forEach(function (pageViews) {
+                        if (pageViews[0] == $viewPanel.data("page-path")) {
+                            $viewPanel.html($viewPanel.data("views-prefix") + "<b>" + pageViews[1] + "</b>")
+                            dataFound = true
+                        }
+                    });
+                    if (dataFound == false) {
+                        $viewPanel.html($viewPanel.data("views-prefix") + "<b>N/A</b>")
+                    }
+                })
+            },
+            error: function() {
+                $('.views-panel').each(function() {
+                    $viewPanel.html($viewPanel.data("views-prefix") + "<b>N/A</b>")
+                })
+            }
+        })
+    }
 });
