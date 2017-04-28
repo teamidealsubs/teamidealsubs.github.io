@@ -31,6 +31,7 @@
                   type="button">Download</button>
           {% endif %}
         </div>
+        {% if page.category != 'news' %}
         <div class="col-sm-12 col-md-2 col-md-offset-8">
           <div class="panel panel-default">
             <div class="panel-body views-panel" data-page-path="{{ page.url}}">
@@ -38,6 +39,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
       </div>
       {% if page.credits %}
         <div class="credits">

@@ -16,7 +16,7 @@ group: navigation
   {% if category[0] != "news" %}
     <h2 id="{{ category[0] | url_encode }}-ref">{{ category[0] | join: "/" }}</h2>
     <div class="row">
-        {% assign pages_list = category[1] %}
+        {% assign pages_list = category[1] | sort date, title %}
         {% include JB/pages_list_video.html %}
     </div>
   {% endif %}
