@@ -84,6 +84,8 @@ JB :
   atom_path : /atom.xml
   rss_path : /rss.xml
 
+  openload_thumbnaiL_path: https://slmn.de/teamidealsubs/teamidealsubs-openload-thumbnail-proxy.php?file_id=
+
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.

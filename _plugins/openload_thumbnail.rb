@@ -10,7 +10,7 @@ module Jekyll
     def render(context)
         @openload_id = context[@markup.strip]
 
-        uri = URI('https://slmn.de/teamidealsubs-openload-thumbnail-proxy.php?file_id=' + @openload_id)
+        uri = URI('https://slmn.de/teamidealsubs/teamidealsubs-openload-thumbnail-proxy.php?file_id=' + @openload_id)
         response = Net::HTTP.get(uri)
 
         "#{response}"

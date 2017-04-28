@@ -28,12 +28,12 @@ Usage:
       {% if group == null or group == node.group %}
       	{% if page.url == node.url %}
       	<li class="active">
-            {% if node.openload-id %}<img src="{% openload_thumbnail node.openload-id %}" width="100">{% endif %}
+            {% if node.openload-id %}<img src="{{ site.JB.openload_thumbnaiL_path }}{{ node.openload-id }}" width="100">{% endif %}
             <a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a>
         </li>
       	{% else %}
       	<li>
-            {% if node.openload-id %}<img src="{% openload_thumbnail node.openload-id %}" width="100">{% endif %}
+            {% if node.openload-id %}<img src="{{ site.JB.openload_thumbnaiL_path }}{{ node.openload-id }}" width="100">{% endif %}
             <a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a>
         </li>
       	{% endif %}
