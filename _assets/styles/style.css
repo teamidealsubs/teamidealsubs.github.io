@@ -203,3 +203,7 @@
 .thumbnail.active {
   background-color: #101010;
 }
+
+.question-style {
+  font-size:14px;
+}
