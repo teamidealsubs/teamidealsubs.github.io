@@ -3,7 +3,7 @@ layout: post
 title: "I Can See Your Voice - Season 3 Episode 11"
 description: ""
 category: IOI
-tags: [ICSYV, IOI, Chungha]
+tags: [ICSYV, IOI]
 episode: 11
 permalink: /ioi/i-can-see-your-voice-s3-E11
 openload-id: s-5ciWVqrcQ
