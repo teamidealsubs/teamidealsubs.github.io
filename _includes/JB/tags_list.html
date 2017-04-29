@@ -20,13 +20,17 @@ Usage:
 {% if site.JB.tags_list.provider == "custom" %}
   {% include custom/tags_list %}
 {% else %}
+    {% assign tag_url = BASE_PATH | append:site.JB.tags_path | replace:'.html','' %}
+    {% if page.url == '/tags-by-date' %}
+        {% assign tag_url = BASE_PATH | append:'/tags-by-date' %}
+    {% endif %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path | replace:'.html','' }}#{{ tag | url_encode }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+    	<li><a href="{{ tag_url }}#{{ tag | url_encode }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path | replace:'.html','' }}#{{ tag[0] | url_encode }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+    	<li><a href="{{ tag_url }}#{{ tag[0] | url_encode }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
     {% endfor %}
   {% endif %}
 {% endif %}

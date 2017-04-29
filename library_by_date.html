@@ -1,18 +1,18 @@
 ---
 layout: page
 title: Library
-group: navigation
-permalink: /library
+#header: Posts By Category
+permalink: /library-by-date
 ---
 {% include JB/setup %}
 
 <div class="row">
     <div class="col-xs-12 col-md-6">
         <ul class="nav nav-pills nav-justified sort-by-nav">
-            <li role="presentation" class="active"><a href="#">
+            <li role="presentation"><a href="/library">
                 <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span> Sort By Alphabet
             </a></li>
-            <li role="presentation"><a href="/library-by-date">
+            <li role="presentation" class="active"><a href="#">
                 <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Sort By Date
             </a></li>
         </ul>
@@ -28,7 +28,7 @@ permalink: /library
   {% if category[0] != "news" %}
     <h2 id="{{ category[0] | url_encode }}-ref">{{ category[0] | join: "/" }}</h2>
     <div class="row">
-        {% assign pages_list = category[1] | sort: 'title' %}
+        {% assign pages_list = category[1] | sort: 'date' %}
         {% include JB/pages_list_video.html %}
     </div>
   {% endif %}

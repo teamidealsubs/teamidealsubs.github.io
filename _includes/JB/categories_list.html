@@ -20,10 +20,14 @@ Usage:
 {% if site.JB.categories_list.provider == "custom" %}
   {% include custom/categories_list %}
 {% else %}
+    {% assign categories_url = BASE_PATH | append:site.JB.categories_path | replace:'.html','' %}
+    {% if page.url == '/library-by-date' %}
+        {% assign categories_url = BASE_PATH | append:'/library-by-date' %}
+    {% endif %}
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
         {% if category[0] != "news" %}
-            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path | replace:'.html','' }}#{{ category | url_encode }}-ref">
+            <li><a href="{{ categories_url }}#{{ category | url_encode }}-ref">
                 {{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
             </a></li>
     	{% endif %}
@@ -31,7 +35,7 @@ Usage:
   {% else %}
     {% for category in categories_list %}
         {% if category[0] != "news" %}
-            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path | replace:'.html','' }}#{{ category[0] | url_encode }}-ref">
+            <li><a href="{{ categories_url }}#{{ category[0] | url_encode }}-ref">
                 {{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
             </a></li>
     	{% endif %}
