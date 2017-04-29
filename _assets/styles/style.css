@@ -242,3 +242,8 @@
 .sort-by-nav li {
   padding: 1px;
 }
+
+.comments-container, .views-container {
+  display: inline;
+  margin-left: 3px;
+}

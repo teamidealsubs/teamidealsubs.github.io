@@ -11,7 +11,7 @@ $('.openload-download-button').on('click', function () {
                 var $btnSubmit = modal.find('.openload-download-button-complete')
                 var $alertContainer = modal.find('.openload-download-alert-container')
                 modal.find('.openload-download-modal-captcha').attr('src', dataTicket['result']['captcha_url'])
-                modal.find('form').submit(function(event) {
+                modal.find('form').submit(function (event) {
                     event.preventDefault();
                     $alertContainer.html('')
                     $btnSubmit.button('loading')
@@ -39,7 +39,7 @@ $('.openload-download-button').on('click', function () {
                 window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
             }
         },
-        error: function() {
+        error: function () {
             window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
         },
         complete: function () {
@@ -53,7 +53,7 @@ $('#openloadDownloadModal').on('hide.bs.modal', function (e) {
     $('#openloadDownloadModal').find('.openload-download-alert-container').html('');
 })
 
-$(document).ready(function(){
+$(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('#back-to-top').fadeIn();
@@ -76,9 +76,10 @@ $(document).ready(function(){
         $.ajax({
             type: 'GET',
             url: 'https://teamidealsubs-165916.appspot.com/query?id=ahZlfnRlYW1pZGVhbHN1YnMtMTY1OTE2chULEghBcGlRdWVyeRiAgICAgICACgw',
+            cache: false,
             dataType: 'json',
             success: function (dataAllViews) {
-                $('.views-container').each(function() {
+                $('.views-container').each(function () {
                     var $viewPanel = $(this)
                     var dataFound = false
 
@@ -93,11 +94,41 @@ $(document).ready(function(){
                     }
                 })
             },
-            error: function() {
-                $('.views-panel').each(function() {
+            error: function () {
+                $('.views-panel').each(function () {
                     $viewPanel.html($viewPanel.data("views-prefix") + "<b>N/A</b>")
                 })
             }
         })
+    }
+    if ($.find('.comments-container').length > 0) {
+        var listOfUrls = [];
+        $('.comments-container').each(function () {
+            listOfUrls.push('link:' + $(this).attr('data-page-url'));
+        })
+
+        $.ajax({
+            type: 'GET',
+            url: "https://disqus.com/api/3.0/threads/set.json",
+            data: {api_key: 'ze5cwNIhIOpuAOD4mVgUlSeYPIiKurO28O4SFYuwfeIEkNMHIEbhYxSUkc1SywxC', forum: 'teamidealsubs', thread: listOfUrls},
+            cache: false,
+            dataType: 'json',
+            success: function (dataThreadsSet) {
+                if (dataThreadsSet['code'] == 0) {
+                    $('.comments-container').each(function () {
+                        $commentsContainer = $(this)
+                        for (var i in dataThreadsSet['response']) {
+                            if (dataThreadsSet['response'][i]['link'] == $commentsContainer.attr('data-page-url')) {
+                                if (dataThreadsSet['response'][i]['posts'] >= $commentsContainer.data("comments-min")) {
+                                    $commentsContainer.html($commentsContainer.data("comments-prefix") + "<b>" + numeral(dataThreadsSet['response'][i]['posts']).format('0,0') + "</b>")
+                                }
+                            }
+                        }
+                    })
+                } else {
+                    console.error("unexpected response from disqus: ", dataThreadsSet)
+                }
+            }
+        });
     }
 });
