@@ -9,7 +9,7 @@ permalink: /ioi/ioi-section-tv
 openload-id: klNX8dUCtJU
 credits:
   - Translations: [Yubseyo]
-  - Timers: [Yubseyo]
+  - Timers: [Yubseyo. taq]
   - Typesetter: [Yubseyo]
   - Editors: [Yubseyo]
   - Video by: [Yubseyo]
