@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Show CHampion Behind part 1"
+title: "Show Champion Behind part 1"
 description: ""
 category: Gugudan
 tags: [Show Champion Behind, Gugudan]

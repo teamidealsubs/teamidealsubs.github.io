@@ -8,8 +8,13 @@ $('.openload-download-button').on('click', function () {
         success: function (dataTicket) {
             if (dataTicket['status'] == 200) {
                 var modal = $('#openloadDownloadModal').modal('show')
+                var $btnSubmit = modal.find('.openload-download-button-complete')
+                var $alertContainer = modal.find('.openload-download-alert-container')
                 modal.find('.openload-download-modal-captcha').attr('src', dataTicket['result']['captcha_url'])
-                modal.find('.openload-download-button-complete').on('click', function () {
+                modal.find('form').submit(function(event) {
+                    event.preventDefault();
+                    $alertContainer.html('')
+                    $btnSubmit.button('loading')
                     var captchaContent = modal.find('#openloadDownloadModal-captcha-content').val()
                     $.ajax({
                         type: 'GET',
@@ -17,19 +22,19 @@ $('.openload-download-button').on('click', function () {
                         dataType: 'json',
                         success: function (dataDownload) {
                             if (dataDownload['status'] == 200) {
-                                window.location.href = dataDownload['result']['url'];
-
-                                modal.find('.openload-download-button-complete').prop('onclick', null).off('click');
-                                modal.find('#openloadDownloadModal-captcha-content').val('')
                                 $('#openloadDownloadModal').modal('hide')
+                                window.location.href = dataDownload['result']['url'];
+                            } else if (dataDownload['status'] == 403 && dataDownload['msg'] == 'Captcha not solved correctly') {
+                                $alertContainer.html('<div class="alert alert-danger" role="alert">Invalid captcha!</div>')
+                            } else {
+                                window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
                             }
                         },
                         complete: function () {
-                            //$btn.button('reset')
-                            // @TODO: make second button loading to, reset it here
+                            $btnSubmit.button('reset')
                         }
                     });
-                });
+                })
             } else {
                 window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
             }
@@ -41,7 +46,11 @@ $('.openload-download-button').on('click', function () {
             $btn.button('reset')
         }
     });
-    // @TODO: error handling
+})
+$('#openloadDownloadModal').on('hide.bs.modal', function (e) {
+    $('#openloadDownloadModal').find('#openloadDownloadModal-captcha-content').val('')
+    $('#openloadDownloadModal').find('.openload-download-button-complete').prop('onclick', null).off('click');
+    $('#openloadDownloadModal').find('.openload-download-alert-container').html('');
 })
 
 $(document).ready(function(){

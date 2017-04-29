@@ -118,19 +118,21 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="exampleModalLabel">Download video</h4>
           </div>
+          <form>
           <div class="modal-body">
+            <div class="openload-download-alert-container"></div>
             <img class="openload-download-modal-captcha" src="">
-            <form>
               <div class="form-group">
                 <label for="openloadDownloadModal-captcha-content" class="control-label">Captcha:</label>
-                <input type="text" class="form-control" id="openloadDownloadModal-captcha-content">
+                <input type="text" class="form-control" id="openloadDownloadModal-captcha-content" required>
               </div>
-            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary openload-download-button-complete">Download</button>
+            <input class="btn btn-primary openload-download-button-complete"
+                    data-loading-text="Loading..." autocomplete="off" type="submit" value="Download">
           </div>
+          </form>
         </div>
       </div>
     </div>
