@@ -109,10 +109,10 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'GET',
-            url: "https://disqus.com/api/3.0/threads/set.json",
+            url: "https://disqus.com/api/3.0/threads/set.jsonp",
             data: {api_key: 'ze5cwNIhIOpuAOD4mVgUlSeYPIiKurO28O4SFYuwfeIEkNMHIEbhYxSUkc1SywxC', forum: 'teamidealsubs', thread: listOfUrls},
             cache: false,
-            dataType: 'json',
+            dataType: 'jsonp',
             success: function (dataThreadsSet) {
                 if (dataThreadsSet['code'] == 0) {
                     $('.comments-container').each(function () {
