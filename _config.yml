@@ -119,8 +119,8 @@ JB :
     provider : google
     #gauges :
     #    site_id : 'SITE ID'
-    google :
-        tracking_id : 'UA-98158149-1'
+    #google :
+    #    tracking_id : 'SITE ID'
     #getclicky :
     #  site_id : 
     #mixpanel :
