@@ -4,8 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{{ page.title }} - {{ site.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <title>{{ page.title }} {% if page.category %}- {{ page.category }} {% endif %}- {{ site.title }}</title>
+    {% if page.description and page.description != "" %}
+      <meta name="description" content="{{ page.description }}">
+    {% else %}
+      {% if page.openload-id and page.title and page.category %}
+        <meta name="description" content="Watch english subbed {{ page.title }} with {{ page.category }} for free!">
+      {% endif %}
+    {% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
     <!-- Enable responsive viewport -->
