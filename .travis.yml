@@ -3,7 +3,6 @@ install: true
 script: true
 deploy:
   - provider: script
-    script:
-      - ./deploy.sh
+    script: ./deploy.sh
     on:
       branch: master
