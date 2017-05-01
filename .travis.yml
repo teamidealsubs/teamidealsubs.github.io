@@ -1,10 +1,9 @@
-language: ruby
-rvm:
-- 2.3.3
+language: generic
 install: true
 script: true
 deploy:
   - provider: script
-    script: ./deploy.sh $CF_ZONE_ID $CF_AUTH_EMAIL $CF_AUTH_KEY
+    script:
+      - ./deploy.sh
     on:
       branch: master
