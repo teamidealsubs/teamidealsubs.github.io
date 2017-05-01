@@ -1,0 +1,5 @@
+deploy:
+  - provider: script
+    script: deploy.sh $CF_ZONE_ID $CF_AUTH_EMAIL $CF_AUTH_KEY
+    on:
+      branch: master
