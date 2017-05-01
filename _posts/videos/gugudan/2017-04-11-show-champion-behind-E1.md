@@ -14,5 +14,6 @@ credits:
   - Editors: [pyofriend]
   - Video by: [pyofriend]
   - Encoded by: [pyofriend]
+related-tags: [Show Champion Behind]
 ---
 {% include JB/setup %}

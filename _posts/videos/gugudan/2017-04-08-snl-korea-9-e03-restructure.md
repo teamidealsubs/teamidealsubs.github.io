@@ -3,7 +3,7 @@ layout: post
 title: "SNL Korea 9 - Girl Group Restructure"
 description: ""
 category: Gugudan
-tags: [SNL Korea 9, Gugudan]
+tags: [SNL Korea 9, SNL Korea, Gugudan]
 episode: 03
 permalink: /gugudan/snl-korea/E03/3mj/restructure
 openload-id: jEvzsGpQGSQ
