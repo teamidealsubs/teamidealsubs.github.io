@@ -55,6 +55,31 @@
 
     {% if page.canonical %}<link rel="canonical" href="{{ site.url }}{{ page.canonical }}" />{% endif %}
 
+    {% if page.category %}
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "{{ site.url }}{{ page.category }}",
+          "name": "{{ page.category }}"
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ site.url }}{{ page.url }}",
+          "name": "{{ page.title }}"{% if page_image %},
+          "image": "{{ page_image }}"{% endif %}
+        }
+      }]
+    }
+    </script>
+    {% endif %}
+
     <!-- Generated: {{ site.time | date_to_rfc822 }} -->
   </head>
 
