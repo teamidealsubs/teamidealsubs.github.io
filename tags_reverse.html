@@ -2,8 +2,9 @@
 layout: page
 title: Tags
 header: Posts By Tag
-permalink: /tags
+permalink: /tags-reverse
 canonical: /tags
+sitemap: false
 ---
 {% include JB/setup %}
 
@@ -19,7 +20,7 @@ canonical: /tags
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] | url_encode }}-ref">{{ tag[0] }}</h2>
   <div class="row">
-    {% assign pages_list = tag[1] | sort: 'title' %}
+    {% assign pages_list = tag[1] | sort: 'title' | reverse %}
     {% include JB/pages_list_video.html %}
   </div>
 {% endfor %}

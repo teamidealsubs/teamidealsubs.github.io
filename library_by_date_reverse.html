@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Library
-permalink: /library
+permalink: /library-by-date-reverse
 canonical: /library
+sitemap: false
 ---
 {% include JB/setup %}
 
@@ -18,7 +19,7 @@ canonical: /library
   {% if category[0] != "news" %}
     <h2 id="{{ category[0] | url_encode }}-ref">{{ category[0] | join: "/" }}</h2>
     <div class="row">
-        {% assign pages_list = category[1] | sort: 'title' %}
+        {% assign pages_list = category[1] | sort: 'date' | reverse %}
         {% include JB/pages_list_video.html %}
     </div>
   {% endif %}

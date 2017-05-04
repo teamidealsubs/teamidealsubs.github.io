@@ -53,6 +53,8 @@
     <meta property="og:image" content="{{ page_image }}" />
     {% endif %}
 
+    {% if page.canonical %}<link rel="canonical" href="{{ site.url }}{{ page.canonical }}" />{% endif %}
+
     <!-- Generated: {{ site.time | date_to_rfc822 }} -->
   </head>
 

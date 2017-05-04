@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-bottom: 20px;">
+            {% capture url_normal %}{{ sortmenu_baseurl }}{% endcapture %}
+            {% capture url_reverse %}{{ sortmenu_baseurl }}-reverse{% endcapture %}
+            <a
+                    href="{{ url_normal }}" role="button"
+                    class="btn btn-default{% if page.url == url_normal or page.url == url_reverse %} active{% endif %}"
+                    style="width: 60%;">Sort by alphabet</a>
+            <a
+                    href="{{ url_normal }}" role="button"
+                    class="btn btn-default{% if page.url == url_normal %} active{% endif %}"
+                    style="width: 20%;"><span
+                    class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
+            <a
+                    href="{{ url_reverse }}" role="button"
+                    class="btn btn-default{% if page.url == url_reverse %} active{% endif %}"
+                    style="width: 20%;"><span
+                    class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-bottom: 20px;">
+            {% capture url_normal %}{{ sortmenu_baseurl }}-by-date{% endcapture %}
+            {% capture url_reverse %}{{ sortmenu_baseurl }}-by-date-reverse{% endcapture %}
+            <a
+                    href="{{ url_normal }}" role="button"
+                    class="btn btn-default{% if page.url == url_normal or page.url == url_reverse %} active{% endif %}"
+                    style="width: 60%;">Sort by date</a>
+            <a
+                    href="{{ url_normal }}" role="button"
+                    class="btn btn-default{% if page.url == url_normal %} active{% endif %}"
+                    style="width: 20%;"><span
+                    class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
+            <a
+                    href="{{ url_reverse }}" role="button"
+                    class="btn btn-default{% if page.url == url_reverse %} active{% endif %}"
+                    style="width: 20%;"><span
+                    class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+        </div>
+    </div>
+</div>

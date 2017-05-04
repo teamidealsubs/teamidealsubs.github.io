@@ -1,23 +1,14 @@
 ---
 layout: page
 title: Library
-#header: Posts By Category
 permalink: /library-by-date
+canonical: /library
+sitemap: false
 ---
 {% include JB/setup %}
 
-<div class="row">
-    <div class="col-xs-12 col-md-6">
-        <ul class="nav nav-pills nav-justified sort-by-nav">
-            <li role="presentation"><a href="/library">
-                <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span> Sort By Alphabet
-            </a></li>
-            <li role="presentation" class="active"><a href="#">
-                <span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Sort By Date
-            </a></li>
-        </ul>
-    </div>
-</div>
+{% assign sortmenu_baseurl = "/library" %}
+{% include custom/sortmenu.html %}
 
 <ul class="tag_box inline">
   {% assign categories_list = site.categories %}
