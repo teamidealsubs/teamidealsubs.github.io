@@ -103,7 +103,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="jb-navbar-collapse">
           <ul class="nav navbar-nav">
-            <li{% if page.url == '/library' or page.url == '/library-by-date' %} class="active"{% endif %}><a href="/library"{% if page.url == '/library' %} class="active"{% endif %}>
+            <li{% if page.url == '/library' or page.url == '/library-by-date' or page.url == '/library-reverse' or page.url == '/library-by-date-reverse' %} class="active"{% endif %}><a href="/library"{% if page.url == '/library' %} class="active"{% endif %}>
               <span class="glyphicon glyphicon-book navbar-icon" aria-hidden="true"></span> Library
             </a></li>
             <li{% if page.url == '/faq' %} class="active"{% endif %}><a href="/faq"{% if page.url == '/faq' %} class="active"{% endif %}>
