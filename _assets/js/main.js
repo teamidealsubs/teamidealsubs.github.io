@@ -27,7 +27,7 @@ $('.openload-download-button').on('click', function () {
                             } else if (dataDownload['status'] == 403 && dataDownload['msg'] == 'Captcha not solved correctly') {
                                 $alertContainer.html('<div class="alert alert-danger" role="alert">Invalid captcha!</div>')
                             } else {
-                                window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
+                                window.location.href = 'https://oload.tv/f/' + $btn.data('openload-id');
                             }
                         },
                         complete: function () {
@@ -36,11 +36,11 @@ $('.openload-download-button').on('click', function () {
                     });
                 })
             } else {
-                window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
+                window.location.href = 'https://oload.tv/f/' + $btn.data('openload-id');
             }
         },
         error: function () {
-            window.location.href = 'https://openload.co/f/' + $btn.data('openload-id');
+            window.location.href = 'https://oload.tv/f/' + $btn.data('openload-id');
         },
         complete: function () {
             $btn.button('reset')
