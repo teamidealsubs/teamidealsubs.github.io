@@ -14,5 +14,6 @@ credits:
   - Editors: [pyofriend]
   - Video by: [pyofriend]
   - Encoded by: [pyofriend]
+related-tags: [After Mom's Asleep]
 ---
 {% include JB/setup %}
