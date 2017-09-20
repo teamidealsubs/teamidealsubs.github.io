@@ -9,27 +9,33 @@
     </div>
     <div class="content">
       {{ content }}
-	  {% if page.openload-id %}
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="embed-responsive embed-responsive-16by9 video-embed">
-              <!-- <iframe src="https://openload.co/embed/{{ page.openload-id }}/"
-                      scrolling="no" frameborder="0" width="850" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe> -->
-              <iframe class="embed-responsive-item" src="https://oload.tv/embed/{{ page.openload-id }}/"
-                      scrolling="no" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-            </div>
+      {% if page.youtube-id %}
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9 video-embed">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ page.youtube-id }}/" scrolling="no" frameborder="0"
+              allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
           </div>
         </div>
-	  {% endif %}
+      </div>
+      {% endif %}
+      {% if page.openload-id %}
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9 video-embed">
+            <!-- <iframe src="https://openload.co/embed/{{ page.openload-id }}/"
+                      scrolling="no" frameborder="0" width="850" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe> -->
+            <iframe class="embed-responsive-item" src="https://oload.tv/embed/{{ page.openload-id }}/" scrolling="no" frameborder="0"
+              allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+          </div>
+        </div>
+      </div>
+      {% endif %}
       <div class="row">
         <div class="col-sm-12 col-md-2">
           {% if page.openload-id %}
-          <button class="btn btn-primary download-button openload-download-button btn-lg btn-block"
-                  data-openload-id="{{ page.openload-id }}"
-                  data-loading-text="Loading..."
-                  autocomplete="off"
-                  type="button">Download</button>
-          {% endif %}
+          <button class="btn btn-primary download-button openload-download-button btn-lg btn-block" data-openload-id="{{ page.openload-id }}"
+            data-loading-text="Loading..." autocomplete="off" type="button">Download</button> {% endif %}
         </div>
         {% if page.category != 'news' %}
         <div class="col-sm-12 col-md-2 col-md-offset-8">
@@ -43,47 +49,32 @@
       </div>
       {% if page.description %}
       <p>{{ page.description }}</p>
-      {% endif %}
-      {% if page.credits %}
-        <div class="credits">
-          {% for credit_hash in page.credits %}
-            {% for credit in credit_hash %}
-              <span class="label label-primary">{{ credit[0] }}</span> {% for person in credit[1] %}{{ person }}{% if forloop.last != true %}, {% endif %}{% endfor %}<br>
-            {% endfor %}
-          {% endfor %}
-        </div>
+      {% endif %} {% if page.credits %}
+      <div class="credits">
+        {% for credit_hash in page.credits %} {% for credit in credit_hash %}
+        <span class="label label-primary">{{ credit[0] }}</span> {% for person in credit[1] %}{{ person }}{% if forloop.last
+        != true %}, {% endif %}{% endfor %}<br> {% endfor %} {% endfor %}
+      </div>
       {% endif %}
     </div>
 
-  {% unless page.categories == empty %}
+    {% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><i class="glyphicon glyphicon-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list.html %}
+      {% assign categories_list = page.categories %} {% include JB/categories_list.html %}
     </ul>
-  {% endunless %}  
-
-  {% unless page.tags == empty %}
+    {% endunless %} {% unless page.tags == empty %}
     <ul class="tag_box inline">
       <li><i class="glyphicon glyphicon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list.html %}
+      {% assign tags_list = page.tags %} {% include JB/tags_list.html %}
     </ul>
-  {% endunless %}
-
-    {% if page.related-tags %}
-      {% for related-tag in page.related-tags %}
-        {% for tag in site.tags %}
-          {% if tag[0] == related-tag %}
-            <h3 id="{{ tag[0] | url_encode }}-ref">All <b>{{ tag[0] }}</b> videos</h3>
-            <div class="row related-videos">
-              {% assign pages_list = tag[1] | sort: 'title' %}
-              {% include JB/pages_list_video.html %}
-            </div>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    {% endif %}
+    {% endunless %} {% if page.related-tags %} {% for related-tag in page.related-tags %} {% for tag in site.tags %} {% if tag[0]
+    == related-tag %}
+    <h3 id="{{ tag[0] | url_encode }}-ref">All <b>{{ tag[0] }}</b> videos</h3>
+    <div class="row related-videos">
+      {% assign pages_list = tag[1] | sort: 'title' %} {% include JB/pages_list_video.html %}
+    </div>
+    {% endif %} {% endfor %} {% endfor %} {% endif %}
 
     <!-- <hr>
     <ul class="pagination">
@@ -99,8 +90,6 @@
       <li class="next disabled"><a>Next &rarr;</a>
     {% endif %}
     </ul> -->
-    <hr>
-    {% include JB/sharing %}
-    {% include JB/comments %}
+    <hr> {% include JB/sharing %} {% include JB/comments %}
   </div>
 </div>

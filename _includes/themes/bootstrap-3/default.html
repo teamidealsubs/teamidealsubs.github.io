@@ -48,8 +48,8 @@
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
     {% seo %}
-    {% if page.openload-id %}
-    {% capture page_image %}{{ site.JB.openload_thumbnail_path }}{{ page.openload-id }}{% endcapture %}
+    {% if page.openload-id or page.youtube-id %}
+    {% capture page_image %}{% if page.youtube-id %}https://img.youtube.com/vi/{{ page.youtube-id }}/hqdefault.jpg{% else if page.openload-id %}{{ site.JB.openload_thumbnail_path }}{{ page.openload-id }}{% endif %}{% endcapture %}
     <meta property="og:image" content="{{ page_image }}" />
     {% endif %}
 

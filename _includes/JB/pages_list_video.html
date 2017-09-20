@@ -28,7 +28,11 @@ Usage:
       {% if group == null or group == node.group %}
         <div class="col-xs-6 col-md-3">
             <a href="{{ BASE_PATH }}{{node.url}}" class="thumbnail video-tile{% if page.url == node.url %} active{% endif %}">
+                {% if node.youtube-id %}
+                <img src="https://img.youtube.com/vi/{{ node.youtube-id }}/hqdefault.jpg">
+                {% else if node.openload-id %}
                 <img src="{{ site.JB.openload_thumbnail_path }}{{ node.openload-id }}">
+                {% endif %}
                 <div class="caption">
                     <div>
                         <p>{{node.title}}</p>
